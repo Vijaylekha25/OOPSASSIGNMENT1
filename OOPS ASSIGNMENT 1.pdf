@@ -1,0 +1,108 @@
+Q1. Explain Class and Object with respect to Object-Oriented Programming. Give a suitable example.
+
+# Define a class called 'Car'
+class Car:
+    # Class variable
+    wheels = 4
+​
+    # Constructor method
+    def __init__(self, make, model):
+        # Instance variables
+        self.make = make
+        self.model = model
+​
+    # Method
+    def start(self):
+        return f"The {self.make} {self.model} is starting."
+​
+# Creating objects of the 'Car' class
+car1 = Car("Toyota", "Camry")
+car2 = Car("Honda", "Civic")
+​
+# Accessing attributes and methods of the objects
+print(car1.make)       # Output: Toyota
+print(car2.model)      # Output: Civic
+print(car1.start())    # Output: The Toyota Camry is starting.
+Toyota
+Civic
+The Toyota Camry is starting.
+Q2. Name the four pillars of OOPs.
+
+Encapsulation: The bundling of data and methods that operate on that data within a single unit (i.e., the class) is known as encapsulation. It helps in hiding the internal implementation details of an object and only exposes the necessary interfaces to interact with it.
+
+Abstraction: Abstraction involves representing essential features of an object while hiding the unnecessary details. It allows users to work with high-level concepts without worrying about the implementation complexities.
+
+Inheritance: Inheritance is a mechanism that allows a class (subclass) to inherit the properties and behaviors of another class (superclass). It promotes code reusability and allows creating specialized classes from existing ones.
+
+Polymorphism: Polymorphism allows objects of different classes to be treated as objects of a common superclass. It allows a single interface to represent different types of objects and supports method overriding and method overloading.
+
+Q3. Explain why the init() function is used. Give a suitable example.
+
+class Dog:
+    def __init__(self, name, age):
+        self.name = name
+        self.age = age
+​
+    def bark(self):
+        return "Woof!"
+​
+# Creating an object of the 'Dog' class
+dog1 = Dog("Buddy", 3)
+​
+# Accessing attributes and methods of the object
+print(dog1.name)      # Output: Buddy
+print(dog1.age)       # Output: 3
+print(dog1.bark())    # Output: Woof!
+Buddy
+3
+Woof!
+Q4. Why self is used in OOPs?
+
+In object-oriented programming, self is a reference to the instance of the class. When defining methods within a class, the first parameter of the method is always self, which refers to the object that the method is being called on. It allows the method to access and modify the object's attributes and call other methods within the class.
+
+When an object calls a method, Python automatically passes the reference to the object as the first argument (i.e., self). It allows each object to maintain its state independently and ensures that the correct object's attributes are accessed and modified.
+
+Q5. What is inheritance? Give an example for each type of inheritance.
+
+# Base class
+class Animal:
+    def speak(self):
+        return "Animal speaks."
+​
+# Derived class inheriting from Animal
+class Dog(Animal):
+    def bark(self):
+        return "Dog barks."
+​
+# Creating an object of the 'Dog' class
+dog = Dog()
+​
+# Accessing methods of both classes
+print(dog.speak())    # Output: Animal speaks.
+print(dog.bark())     # Output: Dog barks.
+Animal speaks.
+Dog barks.
+# Base classes
+class Fish:
+    def swim(self):
+        return "Fish swims."
+​
+class Bird:
+    def fly(self):
+        return "Bird flies."
+​
+# Derived class inheriting from both Fish and Bird
+class FlyingFish(Fish, Bird):
+    pass
+​
+# Creating an object of the 'FlyingFish' class
+flying_fish = FlyingFish()
+​
+# Accessing methods of both base classes
+print(flying_fish.swim())   # Output: Fish swims.
+print(flying_fish.fly())    # Output: Bird flies.
+Fish swims.
+Bird flies.
+
+
+​
